@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bayon, Darker_Grotesque, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bayon = Bayon({
   subsets: ["latin"],
+  weight: "400",
+  variable: '--font-bayon',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const darkerGrotesque = Darker_Grotesque({
   subsets: ["latin"],
+  variable: '--font-darker-grotesque',
 });
 
 export const metadata: Metadata = {
@@ -24,9 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${bayon.variable} ${darkerGrotesque.variable} antialiased `}>
         {children}
       </body>
     </html>
