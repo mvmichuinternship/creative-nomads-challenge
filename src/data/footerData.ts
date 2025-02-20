@@ -5,13 +5,14 @@ const footerItems = [
       "About SIE",
       "Careers",
       "PlayStation Studios",
-      "PlayStation Productions",
+      "PlayStation",
+      "Productions",
     ],
   },
 
   {
     footerHeading: "Products",
-    footerItems: ["PS5", "PS4", "PS VR2", "Accessories"],
+    footerItems: ["PS5", "PS4", "PS VR2", "Accessor", "ies"],
   },
 
   {
@@ -20,7 +21,8 @@ const footerItems = [
       "Environment",
       "Accessibility",
       "Online safety",
-      "Diversity & inclusion",
+      "Diversity &",
+      "inclusion",
     ],
   },
 
@@ -30,7 +32,8 @@ const footerItems = [
       "Support hub",
       "PlayStation Safety",
       "PSN Status",
-      "PlayStation Repairs",
+      "PlayStation",
+      "Repairs",
     ],
   },
 
@@ -38,7 +41,8 @@ const footerItems = [
     footerHeading: "Resources",
     footerItems: [
       "PSN terms of service",
-      "PS Store cancellation policy",
+      "PS Store cancellation",
+      "policy",
       "Age ratings",
       "Health warning",
     ],
@@ -46,7 +50,7 @@ const footerItems = [
 
   {
     footerHeading: "Connect",
-    footerItems: ["iOS app", "Android APP"],
+    footerItems: ["iOS app", "Android", "APP"],
   },
 ];
 

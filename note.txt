@@ -1,1 +1,6 @@
 Check button width
+Footer grid alignment
+Change all pixel values to rem in tailwind
+poster rectangle bg no repeat issue, side shadow - absolute
+navbar
+bg color for button

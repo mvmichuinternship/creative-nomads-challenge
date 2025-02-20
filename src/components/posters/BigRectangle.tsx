@@ -8,30 +8,31 @@ export const BigRectangle = ({ pattern }: BigRectangleProps) => {
   return (
     <svg
       width="100%"
-      className="bg-white "
       height="100%"
-      viewBox="0 0 1500 1200"
+      viewBox="0 0 950 450"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
         <pattern
-          id="image-ref-id"
+          id="image-ref-id1"
           patternUnits="userSpaceOnUse"
           width="100%"
+          className="bg-no-repeat"
           height="100%"
         >
           <image
             href={pattern}
             width="100%"
             height="100%"
-            preserveAspectRatio="xMidYMid meet"
+            className="bg-no-repeat"
+            preserveAspectRatio="xMidYMid slice"
           />
         </pattern>
       </defs>
       <path
-        d="M493 220.827L603.535 55.8353C621.548 28.9469 630.555 15.5027 642.905 8.49973C652.461 3.08129 663.321 0.390144 674.301 0.719669C688.492 1.14556 702.734 8.82843 731.218 24.1942L1018.5 179.165V978H0L493 220.827Z"
-        fill="url(#image-ref-id)"
+        d="M613 270.827L723.535 75.8353C741.548 48.9469 750.555 35.5027 762.905 28.4997C772.461 23.0813 783.321 20.3901 794.301 20.7197C808.492 21.1456 822.734 28.8284 851.218 44.1942L1138.5 199.165V1198H120L613 270.827Z"
+        fill="url(#image-ref-id1)"
       />
     </svg>
   );

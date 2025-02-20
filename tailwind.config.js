@@ -66,9 +66,10 @@ module.exports = {
     backgroundColor: ({ theme }) => theme("colors"),
     backgroundImage: {
       none: "none",
-      "homepagebg":"url('/assets/homepage/bg.png')",
-      "firstGradient":'linear-gradient(to right,#000000, #05081863, #0314680A,#05081600)',
-      "secondGradient":'linear-gradient(to right, #031A85, #01061F)',
+      homepagebg: "url('/assets/homepage/bg.png')",
+      firstGradient:
+        "linear-gradient(to right,#000000, #05081863, #0314680A,#05081600)",
+      secondGradient: "linear-gradient(to right, #031A85, #01061F)",
       "gradient-to-t": "linear-gradient(to top, var(--tw-gradient-stops))",
       "gradient-to-tr":
         "linear-gradient(to top right, var(--tw-gradient-stops))",
@@ -189,12 +190,12 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
-      primary:"#050815",
-      secondary:"#050816",
-      buttonShadow:"#072FB9", // spread 1 blur 15
-      buttonShadowHover:"#072FB9", //spread 13 blur 15
-      cardShadowHover:"#3C52E6", //blur 17 spread 9
-      cardShadow:"#3C52E6", // blur 17 pread 7
+      primary: "#050815",
+      secondary: "#050816",
+      buttonShadow: "#072FB9", // spread 1 blur 15
+      buttonShadowHover: "#072FB9", //spread 13 blur 15
+      cardShadowHover: "#3C52E6", //blur 17 spread 9
+      cardShadow: "#3C52E6", // blur 17 pread 7
     }),
     columns: {
       auto: "auto",
@@ -337,8 +338,8 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
-      "heading": ["var(--font-bayon)"],
-      "body": ["var(--font-darker-grotesque)"],
+      heading: ["var(--font-bayon)"],
+      body: ["var(--font-darker-grotesque)"],
       sans: [
         "ui-sans-serif",
         "system-ui",
@@ -368,12 +369,18 @@ module.exports = {
       ],
     },
     fontSize: {
-      xs: ["20px",{ lineHeight: "1.75rem" }],
-      sm: ["24px", { lineHeight: "2.1rem" }],
-      base: ["30px",{ lineHeight: "2.5rem" } ],
-      lg: ["32px", { lineHeight: "2.5rem" }],
-      xl: ["40px", { lineHeight: "2.5rem" }],
-      xl1: ["48px",{ lineHeight: "3.7rem" } ],
+      // xs: ["20px",{ lineHeight: "1.75rem" }],
+      // sm: ["24px", { lineHeight: "2.1rem" }],
+      // base: ["30px",{ lineHeight: "2.5rem" } ],
+      // lg: ["32px", { lineHeight: "2.5rem" }],
+      // xl: ["40px", { lineHeight: "2.5rem" }],
+      // xl1: ["48px",{ lineHeight: "3.7rem" } ],
+      xs: ["1.25rem", { lineHeight: "1.75rem" }],
+      sm: ["1.5rem", { lineHeight: "2.1rem" }],
+      base: ["1.875rem", { lineHeight: "2rem" }],
+      lg: ["2rem", { lineHeight: "2rem" }],
+      xl: ["2.5rem", { lineHeight: "2rem" }],
+      xl1: ["3rem", { lineHeight: "3.5rem" }],
       "2xl": ["1.5rem", { lineHeight: "2rem" }],
       "3xl": ["1.875rem", { lineHeight: "2.25rem" }],
       "4xl": ["2.25rem", { lineHeight: "2.5rem" }],
@@ -860,7 +867,7 @@ module.exports = {
       150: "1.5",
     },
     screens: {
-      xs:"520px",
+      xs: "520px",
       sm: "640px",
       md: "768px",
       lg: "1024px",

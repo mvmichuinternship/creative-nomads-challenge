@@ -10,13 +10,13 @@ const Typography = ({ classname, fontType, text }: TypographyProps) => {
   return (
     <div>
       {(fontType === "Heading1" && (
-        <p className={cn("font-heading font-normal text-xl1 ",classname)}>{text}</p>
+        <p className={cn(`font-heading font-normal text-xl1 `,classname)}>{text}</p>
       )) ||
         (fontType === "Heading2" && (
-          <p className={cn("font-heading font-normal text-xl ",classname)}>{text}</p>
+          <p className={cn(`font-heading font-normal text-xl `,classname)}>{text}</p>
         )) ||
         (fontType === "Heading3" && (
-          <p className={cn("font-heading font-normal text-lg ",classname)}>{text}</p>
+          <p className={cn(`font-heading font-normal text-lg `,classname)}>{text}</p>
         )) ||
         (fontType === "Subtitle" && (
           <p className={cn(`font-body font-normal text-base `,classname)}>{text}</p>
@@ -25,7 +25,7 @@ const Typography = ({ classname, fontType, text }: TypographyProps) => {
           <p className={cn(`font-body font-normal text-sm `,classname)}>{text}</p>
         )) ||
         (fontType === "SmallText" && (
-          <p className={cn("font-body font-normal text-xs ",classname)}>{text}</p>
+          <p className={cn(`font-body font-normal text-xs `,classname)}>{text}</p>
         )) ||
         (fontType === "Button" && (
           <p

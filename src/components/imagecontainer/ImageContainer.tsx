@@ -4,7 +4,7 @@ import Image from "next/image";
 
 interface ImageContainerProps {
   classname?: String;
-  onHover?: () => {};
+  onHover?: (e: any) => void;
   ImageContainerSrc?: string;
   ImageContainerAlt?: String;
 }
@@ -15,16 +15,21 @@ const ImageContainer = ({
   ImageContainerAlt,
 }: ImageContainerProps) => {
   return (
-    <div className="relative max-w-[122px] flex justify-center items-center group rounded-full">
+    <div
+      className="relative max-w-[122px] flex justify-center items-center group rounded-full"
+      onMouseEnter={onHover}
+    >
       <div className="invisible group-hover:visible absolute rounded-full -inset-1 bg-white ease-in-out  blur-sm opacity-80"></div>
       <div
-        className="relative w-[122px] h-[122px] bg-white rounded-full justify-center items-center overflow-hidden border  px-8 py-2 flex gap-x-2 
+        className="relative w-[100px] h-[100px]  rounded-full justify-center items-center flex    
        group"
       >
         <Image
           alt="ImageContainerAlt"
-          src={ImageContainerSrc || ""}
-          className="w-full h-full"
+          src={`/assets/rectangleimages/${ImageContainerSrc}.png`}
+          className="w-full h-full bg-cover rounded-full"
+          width={100}
+          height={100}
         />
       </div>
     </div>

@@ -10,10 +10,11 @@ import HomeScreen from "@/screens/homeScreen/HomeScreen";
 import CardScreen from "@/screens/cardscreen/CardScreen";
 import FeatureScreen from "@/screens/featurescreen/FeatureScreen";
 import FooterScreen from "@/screens/footerscreen/FooterScreen";
+import PosterScreen from "@/screens/posterscreen/PosterScreen";
 
 export default function Home() {
   return (
-    <div className="h-screen w-screen bg-primary">
+    <div className="h-[100%] w-[100%] bg-primary">
       {/* <Typography fontType={"Heading1"}  text={"This is Heading"}/> */}
       {/* <ButtonContainer ButtonContainerSrc="" text={"DUMMY TEXT"}/> */}
       {/* <Button buttonText={"PRE-BOOK"} svgCode={svgPrebookHome}/> */}
@@ -25,6 +26,7 @@ export default function Home() {
       <HomeScreen />
       <CardScreen/>
       <FeatureScreen/>
+      <PosterScreen/>
       <FooterScreen/>
     </div>
   );

@@ -1,12 +1,14 @@
 import React from "react";
 import Typography from "../typography/Typography";
 import Image from "next/image";
-import cn from 'clsx'
+import cn from "clsx";
 
 interface CardProps {
-  isDefault?:Boolean;
+  isDefault?: Boolean;
+  isHover?: Boolean;
   classname?: String;
-  onHover?: () => {};
+  onHover?: () => void;
+  onNotHover?: () => void;
   CardSrc?: string;
   CardAlt?: String;
 }
@@ -14,14 +16,25 @@ const Card = ({
   classname,
   isDefault,
   onHover,
+  onNotHover,
   CardSrc,
+  isHover,
   CardAlt,
 }: CardProps) => {
   return (
-    <div className={cn(`relative  max-w-[434px] max-h-[392px]  hover:scale-150 transition delay-10 ease-in-out transform duration-300 flex justify-center items-center group `,classname)}>
+    <div
+      className={cn(
+        `relative  lg:max-w-[434px] lg:max-h-[392px] max-w-[234px] max-h-[192px]  transition delay-10 ease-in-out transform duration-300 flex justify-center items-center group `,
+        classname,
+        isHover ? "hover:scale-150 hover:z-50" : "scale-1",
+        isDefault ? "scale-150 z-50" : ""
+      )}
+      onMouseEnter={onHover}
+      onMouseLeave={onNotHover}
+    >
       <div className=" group-hover:bg-cardShadowHover absolute -inset-1 bg-cardShadow   blur-[6px] scale-[1.02] opacity-90 "></div>
       <div
-        className="relative w-[300px] h-[258px] bg-none  justify-center items-center    
+        className="relative lg:w-[300px] lg:h-[258px] w-[200px] h-[158px] bg-none  justify-center items-center    
        group"
       >
         <img
