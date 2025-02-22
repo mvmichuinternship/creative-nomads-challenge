@@ -46,7 +46,7 @@ export default function PosterScreen() {
 
   useEffect(() => {
     const handleResize = () => {
-      setSetWindow(window?.innerWidth < 1024);
+      setSetWindow(typeof window !== "undefined" && window?.innerWidth < 1024);
     };
 
     window.addEventListener("resize", handleResize);
