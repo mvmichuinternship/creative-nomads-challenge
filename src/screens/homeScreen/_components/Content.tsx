@@ -23,8 +23,8 @@ export default function Content() {
           }
         />
         <div className="flex flex-col lg:flex-row lg:gap-x-8 gap-y-4 lg:gap-y-0 gap-x-0 justify-between w-full">
-          <Button buttonText={"PRE-BOOK"} svgCode={svgPrebook} />
-          <Button buttonText={"WATCH THE REVEAL"} svgCode={svgGlasses} />
+          <Button buttonText={"PRE-BOOK"} svgCode={svgPrebook} classname={"hover:px-[17.8px]"}/>
+          <Button buttonText={"WATCH THE REVEAL"} svgCode={svgGlasses} classname={"hover:px-[15px]"} />
         </div>
       </div>
       <div className="sm:w-auto invisible xs:visible w-44 absolute -bottom-8 right-4 sm:static">

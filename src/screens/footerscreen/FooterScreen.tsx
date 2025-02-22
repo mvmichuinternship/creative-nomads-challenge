@@ -19,7 +19,7 @@ export default function FooterScreen() {
       <Divider />
       <FooterSection />
       <Divider />
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-y-2">
         <Typography
           fontType={"Heading3"}
           text={"SONY INTERACTIVE ENTERTAINMENT"}
@@ -36,9 +36,12 @@ export default function FooterScreen() {
         />
       </div>
       <Divider />
-      <div className="w-full flex sm:flex-row flex-col sm:justify-between sm:items-center pb-16">
+      <div className="w-full flex md:flex-row flex-col justify-start items-start md:justify-between md:items-center pb-16">
+        <div className="flex gap-x-2">
+        <Image alt="" src={"/assets/footerimages/icons/Geography.svg"} width={25} height={25}/>
         <Typography fontType={"SmallText"} text={"India"} />
-        <div className="space-x-4 flex sm:flex-row flex-col">
+        </div>
+        <div className="md:space-x-4 flex sm:flex-row flex-col">
 
         {footerPolicies.map((data) => (
           <div key={data} >

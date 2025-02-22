@@ -10,7 +10,7 @@ export const buttonData = [
     text: "8K Ultra HD Graphics",
     buttonContainerAlt: "image1",
     ButtonContainerSrc: "image1",
-    imageClassName: "bg-cover md:w-auto",
+    imageClassName: "bg-cover md:w-auto ",
     description:
       "Feel every moment like never before with the enhanced DualSense 2 controller. Featuring next-gen haptic feedback, improved adaptive triggers, and precision motion sensors, the PS6 delivers unmatched control and responsiveness, pulling you deeper.",
   },

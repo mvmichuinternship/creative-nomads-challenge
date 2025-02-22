@@ -21,23 +21,23 @@ const ButtonContainer = ({
 }: ButtonContainerProps) => {
   return (
     <div
-      className="relative w-fit flex justify-between items-center group transform hover:scale-110 transition-all duration-600 z-[99]"
+      className="relative sm:w-fit w-[50%] justify-center  flex sm:justify-between items-center group transform hover:scale-110 transition-all duration-600 z-[99]"
       onMouseEnter={onHover}
     >
       <div className="absolute rounded-xs -inset-1 bg-buttonShadow z-[1] group-hover:z-[1] group-hover:blur-sm group-hover:scale-y-[1.05] group-hover:opacity-100 transition-all duration-600 transform blur-sm opacity-80"></div>
       <div className="absolute opacity-100 -top-3 -left-5 z-[99] bg-firstGradient   w-[50%] h-[120%] group-hover:h-[140%] group-hover:-top-5  group-hover:z-[99]"></div>
       <div
-        className=" flex  w-fit bg-secondGradient z-[3] group-hover:z-[3] justify-start items-center  px-0 sm:px-2 md:px-8 py-2 flex   group">
+        className=" flex sm:w-fit w-full bg-secondGradient z-[3] group-hover:z-[3] justify-start items-center  px-0 sm:px-2 md:px-8 py-2 flex   group">
         <Image
           alt="ButtonContainerAlt"
           src={ButtonContainerSrc || ""}
-          className={cn(`  w-auto z-[5]  pr-4`, imageClassName)}
+          className={cn(`  w-auto z-[5]  pr-4 sm:inline hidden`, imageClassName)}
           width={100} height={100} layout="responsive"
         />
         <Typography
           fontType={"Heading3"}
           classname={
-            "w-full lg:text-nowrap text-wrap lg:text-lg lg:leading-snug leading-0 text-sm"
+            "w-full lg:text-nowrap text-wrap lg:text-lg lg:leading-snug leading-0 text-sm sm:px-0 px-4 "
           }
           text={text}
         />

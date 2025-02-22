@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.js", "src/components/icon/svg/Prebook.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.js", "src/components/icon/svg/Prebook.tsx", "src/components/models/Astro.jsx", "src/components/models/Spidy.jsx"],
   "exclude": ["node_modules"]
 }

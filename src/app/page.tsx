@@ -14,7 +14,7 @@ import PosterScreen from "@/screens/posterscreen/PosterScreen";
 
 export default function Home() {
   return (
-    <div className="h-[100%] w-[100%] bg-primary">
+    <div className="h-[100%] w-screen bg-primary">
       {/* <Typography fontType={"Heading1"}  text={"This is Heading"}/> */}
       {/* <ButtonContainer ButtonContainerSrc="" text={"DUMMY TEXT"}/> */}
       {/* <Button buttonText={"PRE-BOOK"} svgCode={svgPrebookHome}/> */}

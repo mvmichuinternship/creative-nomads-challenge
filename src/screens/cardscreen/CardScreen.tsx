@@ -1,21 +1,20 @@
-'use client'
+"use client";
 import Card from "@/components/card/Card";
 import Typography from "@/components/typography/Typography";
 import { cardData } from "@/data/cardData";
 import { useEffect, useState } from "react";
 
 export default function CardScreen() {
+  const [cln, setCln] = useState("scale-110");
+  const [isHover, setIsHover] = useState(false);
 
-  const [cln,setCln]=useState("scale-110")
-  const [isHover,setIsHover]=useState(false)
-
-  function onHover(){
-    setIsHover(true)
-    cardData[1].isDefault=false
+  function onHover() {
+    setIsHover(true);
+    cardData[1].isDefault = false;
   }
-  function onNotHover(){
-    setIsHover(false)
-    cardData[1].isDefault=true
+  function onNotHover() {
+    setIsHover(false);
+    cardData[1].isDefault = true;
   }
 
   // useEffect(()=>{
@@ -36,18 +35,21 @@ export default function CardScreen() {
         />
       </div>
       <div className="flex sm:flex-row flex-col w-full justify-center items-center">
+        {cardData.map((data) => (
+          <div className="w-fit " key={data.text}>
+            <Card
+              CardAlt={"cardData"}
+              CardSrc={data.text}
+              onHover={onHover}
+              onNotHover={onNotHover}
+              isHover={isHover}
+              classname={data.className}
+              isDefault={data.isDefault}
+            />
 
-      {cardData.map((data) => (
-        <div className="w-fit " key={data.text}>
-         
-                <Card CardAlt={"cardData"} CardSrc={data.text}  onHover={onHover} onNotHover={onNotHover} isHover={isHover} classname={data.className} isDefault={data.isDefault}/>
-             
-                {/* <Card CardAlt={"cardData"} CardSrc={data.text}  onHover={onHover} isHover={isHover} isDefault={isDefault}/> */}
-              
-            
-          
-        </div>
-      ))}
+            {/* <Card CardAlt={"cardData"} CardSrc={data.text}  onHover={onHover} isHover={isHover} isDefault={isDefault}/> */}
+          </div>
+        ))}
       </div>
     </div>
   );

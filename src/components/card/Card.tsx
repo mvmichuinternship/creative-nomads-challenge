@@ -26,8 +26,8 @@ const Card = ({
       className={cn(
         `relative  lg:max-w-[434px] lg:max-h-[392px] max-w-[234px] max-h-[192px]  transition delay-10 ease-in-out transform duration-300 flex justify-center items-center group `,
         classname,
-        isHover ? "hover:scale-150 hover:z-50" : "scale-1",
-        isDefault ? "scale-150 z-50" : ""
+        isHover ? "hover:scale-150 hover:z-[99]" : "scale-1 z-1",
+        isDefault ? "scale-150 " : ""
       )}
       onMouseEnter={onHover}
       onMouseLeave={onNotHover}

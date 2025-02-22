@@ -1,3 +1,5 @@
+import { Facebook } from "lucide-react";
+
 const footerItems = [
   {
     footerHeading: "About",
@@ -50,6 +52,12 @@ const footerItems = [
 
   {
     footerHeading: "Connect",
+    footerIcons: [
+      "FacebookCircled.svg",
+      "InstagramCircle.svg",
+      "X.svg",
+      "YouTubeLogo.svg",
+    ],
     footerItems: ["iOS app", "Android", "APP"],
   },
 ];

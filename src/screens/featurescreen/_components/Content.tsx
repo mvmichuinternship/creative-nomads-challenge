@@ -24,9 +24,9 @@ export default function Content() {
   });
 
   return (
-    <div className="relative w-full h-full flex md:flex-row flex-col md:gap-y-0 gap-y-8 justify-end xl:pr-64 lg:pr-32 lg:pt-52 md:pt-48 md:px-8 px-4 ">
+    <div className="relative w-full h-full flex  md:flex-row flex-col md:gap-y-0 gap-y-8  xl:pr-64 lg:pr-32   md:px-8 px-4 ">
       {/* <div className="w-full relative"> */}
-      <div className="absolute md:top-0 top-8 z-1 right-0">
+      <div className="absolute md:top-10 top-8 z-1 sm:right-16 right-0">
         <Image
           alt=""
           src="/assets/featurepage/airpods.png"
@@ -34,7 +34,7 @@ export default function Content() {
           height={139}
         />
       </div>
-      <div className="absolute md:-bottom-32 bottom-32 z-1 md:invisible lg:visible visible right-0">
+      <div className="absolute md:-bottom-32 bottom-32 z-1 md:hidden lg:inline inline right-0">
         <Image
           alt=""
           src="/assets/featurepage/feature.svg"
@@ -42,7 +42,7 @@ export default function Content() {
           height={139}
         />
       </div>
-      <div className="lg:w-fit md:absolute  w-fit top-20 left-0 flex flex-col gap-y-12">
+      <div className=" md:pt-16 pt-16 w-full flex flex-col gap-y-12">
         {buttonData.map((data) => (
           <span key={data.text}>
 
@@ -60,16 +60,16 @@ export default function Content() {
         ))}
       </div>
       {/* </div> */}
-      <div className="flex flex-col justify-center items-center xl:w-[22rem] w-[22rem] lg:w-[22rem] z-50 md:w-[22rem]">
+      <div className="flex flex-col justify-center items-center  sm:w-[31rem] w-[70%] z-50  md:pt-40 ">
         <div className=" w-full ">
-          <Typography fontType={"Heading2"} text={content.text} classname={"text-nowrap"}/>
+          <Typography fontType={"Heading2"} text={content.text} classname={"xs:text-nowrap"}/>
           <Typography
             fontType={"Body"}
             classname={" pt-4 pb-8"}
             text={content.description}
           />
           <div className="flex flex-col lg:flex-row  w-full">
-            <Button buttonText={"MORE FEATURES"} svgCode={svgCursor} />
+            <Button buttonText={"MORE FEATURES"} svgCode={svgCursor} classname={"hover:px-[14.6px]"}/>
           </div>
         </div>
       </div>

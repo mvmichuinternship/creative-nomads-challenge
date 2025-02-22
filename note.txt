@@ -1,6 +1,20 @@
-Check button width
-Footer grid alignment
-Change all pixel values to rem in tailwind
-poster rectangle bg no repeat issue, side shadow - absolute
-navbar
-bg color for button
+Check button width --> done
+Footer grid alignment --> done
+Change all pixel values to rem in tailwind --> already done
+poster rectangle bg no repeat issue --> done, side shadow - absolute --> done
+navbar --> bugs to be fixed
+bg color for button --> done
+cardscreen hover issue --> done
+navbar animation --> to be looked into
+posters animation and poster small rectangle pics to be updated
+music to be added
+canvas better bg to be changed.
+3d model animations to be added.
+features page button working in responsive screen to be changed.
+
+
+
+credits:
+
+astrobot: "The Playroom Robot" (https://skfb.ly/ontM9) by Modeler3dP is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+spidy - "Spider man playstation (Rigged)" (https://skfb.ly/oJvWo) by As7 3d models is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).

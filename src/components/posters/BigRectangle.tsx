@@ -7,10 +7,11 @@ interface BigRectangleProps {
 export const BigRectangle = ({ pattern }: BigRectangleProps) => {
   return (
     <svg
-      width="100%"
-      height="100%"
-      viewBox="0 0 950 450"
+      width="1200px"
+      height="800px"
+      viewBox="0 0 1500 1200"
       fill="none"
+      className=""
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
@@ -18,13 +19,11 @@ export const BigRectangle = ({ pattern }: BigRectangleProps) => {
           id="image-ref-id1"
           patternUnits="userSpaceOnUse"
           width="100%"
-          className="bg-no-repeat"
+          className="bg-no-repeat bg-contain"
           height="100%"
         >
           <image
             href={pattern}
-            width="100%"
-            height="100%"
             className="bg-no-repeat"
             preserveAspectRatio="xMidYMid slice"
           />

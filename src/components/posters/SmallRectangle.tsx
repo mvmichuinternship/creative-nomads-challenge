@@ -11,21 +11,20 @@ export const SmallRectangle = ({ pattern }: SmallRectangleProps) => {
       height="100%"
       viewBox="0 0 296 499"
       fill="none"
+      className=""
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
         <pattern
           id="image-ref-id"
           patternUnits="userSpaceOnUse"
-          width="80%"
-          className="bg-no-repeat"
-          height="90%"
+          width="100%"
+          className="bg-no-repeat rotate-45 bg-contain"
+          height="100%"
         >
           <image
             href={pattern}
-            width="100%"
-            height="100%"
-            className="bg-no-repeat"
+            className="bg-no-repeat bg-contain"
             preserveAspectRatio="xMidYMid slice"
           />
         </pattern>
