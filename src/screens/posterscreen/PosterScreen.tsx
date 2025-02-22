@@ -19,7 +19,9 @@ import { RNCModel } from "@/components/models/RNCModel.jsx";
 import { LastofusModel } from "@/components/models/LatofUSModel.jsx";
 
 export default function PosterScreen() {
-  const [setWindow, setSetWindow] = useState(window.innerWidth < 1024);
+  const [setWindow, setSetWindow] = useState(
+    typeof window !== "undefined" && window.innerWidth < 1024
+  );
   const [bgimagePattern, setbGImagePattern] = useState("astrobot1");
   const [imagePattern, setImagePattern] = useState("astrobot1");
   const [smallimagePattern, setSmallImagePattern] = useState("b-astrobot");
@@ -46,7 +48,7 @@ export default function PosterScreen() {
 
   useEffect(() => {
     const handleResize = () => {
-      setSetWindow(typeof window !== "undefined" && window?.innerWidth < 1024);
+      setSetWindow(window?.innerWidth < 1024);
     };
 
     window.addEventListener("resize", handleResize);
