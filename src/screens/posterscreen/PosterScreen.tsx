@@ -18,6 +18,8 @@ import { HelldiversModel } from "@/components/models/Helldivers.jsx";
 import { RNCModel } from "@/components/models/RNCModel.jsx";
 import { LastofusModel } from "@/components/models/LatofUSModel.jsx";
 import Music from "@/components/music/Music";
+import { motion } from "motion/react";
+import Image from "next/image";
 
 export default function PosterScreen() {
   const [setWindow, setSetWindow] = useState(
@@ -29,6 +31,7 @@ export default function PosterScreen() {
     svgName: "astrobot1",
     title: "ASTROBOT",
     music: "astro_bot",
+    small:"Rectangle8"
   });
 
   const renderModelSpace = () => {
@@ -64,28 +67,42 @@ export default function PosterScreen() {
   }, []);
 
   return (
-    <div
+    <motion.div
       className={`z-1 relative min-w-screen w-full max-w-screen  rounded-lg bg-cover flex justify-center items-center`}
       style={{
-        backgroundImage: setWindow
-          ? `url('/assets/rectangleimages/${posterData.svgName}.png')`
-          : "none",
+        // backgroundImage: setWindow
+        //   ? `url('/assets/rectangleimages/${posterData.svgName}.png')`
+        //   : "none",
         objectFit: "cover",
         padding: "0 8px",
       }}
+      animate={{
+        backgroundImage: setWindow
+          ? `url('/assets/rectangleimages/${posterData.svgName}.png')`
+          : "none",
+      }}
+      transition={{ duration: 0.3 }}
     >
       <div className="w-50 h-50 z-[99] cursor-pointer">
         <Music src={`${posterData.music}`} />
       </div>
-      <div className=" hidden lg:block lg:absolute z-1 -top-10 lg:-left-80  w-[60%] h-[60%] ">
-        <SmallRectangle
-          pattern={`/assets/rectangleimages/${posterData.svgName}.png`}
+      <motion.div
+        initial={{ y: -100, x: 100 }}
+        whileInView={{ y: 0, x: 0 }}
+        transition={{ type: "spring", duration: 10 }}
+        key={posterData.small}
+        className=" hidden lg:block lg:absolute z-1 -top-20 lg:left-0  w-[60%] h-[60%] "
+      >
+        <Image
+          src={`/assets/rectangleimages/small/${posterData.small}.png`}
+          alt={""}
+          width={196} height={399}
         />
-      </div>
-      <div className="w-[70%] h-[100%] lg:w-[80%] relative z-50 lg:left-32 xl:top-0 lg:top-0">
-        <div className="lg:hidden w-full h-full inline z-0  absolute -inset-1 bg-cardShadow  blur-[6px] scale-[1.02] opacity-90 "></div>
-        <div className=" flex bg-primary h-full lg:bg-transparent opacity-100 relative z-30 lg:border-none border border-white lg:rounded-none rounded-lg p-8  justify-start  items-center  ">
-          <div className="flex flex-col sm:w-[40%] lg:w-[60%] items-center md:items-start justify-center md:text-start text-center h-full  ">
+      </motion.div>
+      <div className="w-[80%] lg:py-0 py-4 h-[100%] lg:w-[80%] relative z-50 lg:left-32 xl:top-0 lg:top-0">
+        {/* <div className="lg:hidden w-full h-full inline z-0  absolute -inset-1 bg-cardShadow  blur-[6px] scale-[1.02] opacity-90 "></div> */}
+        <div className=" flex bg-primary h-full lg:bg-transparent opacity-100 relative z-30 lg:border-none border-[1px] border-white lg:rounded-none rounded-lg p-8  justify-start  items-center  ">
+          <div className="flex flex-col sm:w-[40%] lg:w-[60%] items-center md:items-start justify-center sm:text-start text-center h-full  ">
             <Typography
               fontType={"Heading2"}
               text={"PLAY YOUR WAY !"}
@@ -120,7 +137,7 @@ export default function PosterScreen() {
               />
             </div>
           </div>
-          <div className="lg:w-auto md:w-[50%] h-[50%] hidden sm:block absolute py-8 lg:py-0 px-2 lg:-top-24 right-0">
+          <div className="lg:w-auto md:w-[50%] h-[50%] hidden sm:block absolute py-8 lg:py-0 px-2 lg:-top-24 xl:-right-6 lg:-right-32 right-0">
             {/* <div className="absolute bottom-0 w-[300px]  h-[300px] blur-[100px] bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-70" /> */}
             <RenderThreeModel className={"z-0 "}>
               {renderModelSpace()}
@@ -128,13 +145,19 @@ export default function PosterScreen() {
           </div>
         </div>
       </div>
-      <div className="w-[60%] hidden lg:flex  lg:relative bottom-0  z-1">
+      <motion.div
+        initial={{ y: 100, x: -100 }}
+        whileInView={{ y: 0, x: 0 }}
+        transition={{ type: "spring", duration: 10 }}
+        key={posterData.bigimageName}
+        className="w-[60%] hidden lg:flex  lg:relative bottom-0  z-1"
+      >
         <img
           src={`/assets/rectangleimages/${posterData.bigimageName}.png`}
           className="w-full "
         />
         {/* <BigRectangle pattern={`/assets/rectangleimages/${imagePattern}.png`}/> */}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

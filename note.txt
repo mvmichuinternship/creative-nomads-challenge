@@ -2,16 +2,19 @@ Check button width --> done
 Footer grid alignment --> done
 Change all pixel values to rem in tailwind --> already done
 poster rectangle bg no repeat issue --> done, side shadow - absolute --> done
-navbar --> bugs to be fixed
+navbar --> bugs to be fixed --> almost done
 bg color for button --> done
 cardscreen hover issue --> done
-navbar animation --> to be looked into
-posters animation and poster small rectangle pics to be updated
+navbar animation --> to be looked into --> done
+posters animation and poster small rectangle pics to be updated --> done
 music to be added --> done
 canvas better bg to be changed.
 3d model animations to be added. --> done
 features page button working in responsive screen to be changed.
-Add cursor pointer to clickables
+Add cursor pointer to clickables --> done
+navbar bug --> to be resolved
+Check for model bg bug
+change logo and title of page
 
 
 

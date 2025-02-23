@@ -1,4 +1,4 @@
-import Image from "next/image";
+import React from "react";
 
 interface SmallRectangleProps {
   pattern: string;
@@ -11,51 +11,39 @@ export const SmallRectangle = ({ pattern }: SmallRectangleProps) => {
       height="100%"
       viewBox="0 0 296 499"
       fill="none"
-      className=""
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
         <pattern
-          id="image-ref-id"
+          id="image-ref-id2"
           patternUnits="userSpaceOnUse"
-          width="100%"
-          className="bg-no-repeat rotate-45 bg-contain"
-          height="100%"
+          width="296"
+          height="499"
         >
-          <image
-            href={pattern}
-            className="bg-no-repeat bg-contain"
-            preserveAspectRatio="xMidYMid slice"
-          />
+          <svg
+            // transform="scale(0.1)"
+            width="296"
+            height="499"
+            viewBox="0 0 296 499"
+          >
+            <g transform="rotate(45 148 249.5)">
+              <image
+                href={pattern}
+                x="-240"
+                y="-149.5"
+                width="592"
+                height="998"
+                preserveAspectRatio="xMinYMin slice"
+              />
+            </g>
+          </svg>
         </pattern>
-        {/* <linearGradient
-      id="paint0_linear_53_115"
-      x1="225.5"
-      y1="153.5"
-      x2="3.49993"
-      y2="158"
-      gradientUnits="userSpaceOnUse"
-    >
-      <stop stop-color="#050816" stop-opacity="0.01" />
-      <stop offset="0.74541" stop-color="#050816" stop-opacity="0.24" />
-      <stop offset="1" stop-color="#050816" />
-    </linearGradient> */}
       </defs>
 
       <path
-        d="M0 0 H197.075 
-    C205.858 0 213.974 4.684 218.369 12.288
-    C222.991 20.285 222.742 30.199 217.724 37.954
-    L0 373.785 V0Z"
-        fill="url(#image-ref-id)"
+        d="M0.68941 0.163402L17.1894 0.16338L262.766 0.163377C274.477 0.163379 285.298 6.40809 291.158 16.547C297.321 27.2105 296.989 40.4281 290.298 50.7687L0.689364 498.38L0.689354 478.163L0.68939 134.163L0.68941 0.163402Z"
+        fill="url(#image-ref-id2)"
       />
-      {/* <path
-    d="M0 0 H262.766 
-    C274.477 0 285.298 6.245 291.158 16.384
-    C297.321 27.047 296.989 40.265 290.298 50.605
-    L0 498.38 V0Z"
-    fill="url(#paint0_linear_53_115)"
-  /> */}
     </svg>
   );
 };

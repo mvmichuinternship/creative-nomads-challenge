@@ -4,6 +4,7 @@ export interface posterType {
   svgName: string;
   title: string;
   music: string;
+  small:string;
 }
 export const posterContent = [
   {
@@ -12,6 +13,7 @@ export const posterContent = [
     svgName: "astrobot1",
     title: "ASTROBOT",
     music: "astro_bot",
+    small: "Rectangle8",
   },
   {
     imageName: "lastofus",
@@ -19,6 +21,7 @@ export const posterContent = [
     svgName: "lastofus1",
     title: "THE LAST OF US",
     music: "the_last_of_us",
+    small: "Rectangle9",
   },
   {
     imageName: "rnc",
@@ -26,6 +29,7 @@ export const posterContent = [
     svgName: "tom",
     title: "RACHET AND CLANK",
     music: "ratchet_and_clank_acit",
+    small: "Rectangle11",
   },
   {
     imageName: "spidy",
@@ -33,6 +37,7 @@ export const posterContent = [
     svgName: "spiderman",
     title: "SPIDERMAN",
     music: "spiderman",
+    small: "Rectangle10",
   },
   {
     imageName: "ea",
@@ -40,6 +45,7 @@ export const posterContent = [
     svgName: "fifa",
     title: "EA SPORTS F 25",
     music: "ea_sports",
+    small: "Rectangle12",
   },
   {
     imageName: "helldiver",
@@ -47,5 +53,6 @@ export const posterContent = [
     svgName: "avengers",
     title: "HELLDIVERS 2",
     music: "helldivers",
+    small: "Rectangle13",
   },
 ];

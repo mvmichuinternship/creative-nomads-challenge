@@ -27,7 +27,7 @@ const ButtonContainer = ({
       <div className="absolute rounded-xs -inset-1 bg-buttonShadow z-[1] group-hover:z-[1] group-hover:blur-sm group-hover:scale-y-[1.05] group-hover:opacity-100 transition-all duration-600 transform blur-sm opacity-80"></div>
       <div className="absolute opacity-100 -top-3 -left-5 z-[99] bg-firstGradient   w-[50%] h-[120%] group-hover:h-[140%] group-hover:-top-5  group-hover:z-[99]"></div>
       <div
-        className=" flex sm:w-fit w-full bg-secondGradient z-[3] group-hover:z-[3] justify-start items-center  px-0 sm:px-2 md:px-8 py-2 flex   group">
+        className="truncate flex sm:w-fit w-full bg-secondGradient z-[3] group-hover:z-[3] justify-start items-center  px-0 sm:px-2 md:px-8 py-2 flex   group">
         <Image
           alt="ButtonContainerAlt"
           src={ButtonContainerSrc || ""}
@@ -37,7 +37,7 @@ const ButtonContainer = ({
         <Typography
           fontType={"Heading3"}
           classname={
-            "w-full lg:text-nowrap text-wrap lg:text-lg lg:leading-snug leading-0 text-sm sm:px-0 px-4 "
+            "w-full lg:text-nowrap  text-wrap lg:text-lg lg:leading-snug leading-0 text-sm sm:px-0 px-4 "
           }
           text={text}
         />

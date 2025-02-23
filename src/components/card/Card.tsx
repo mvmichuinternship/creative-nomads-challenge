@@ -24,7 +24,7 @@ const Card = ({
   return (
     <div
       className={cn(
-        `relative  lg:max-w-[434px] lg:max-h-[392px] max-w-[234px] max-h-[192px]  transition delay-10 ease-in-out transform duration-300 flex justify-center items-center group `,
+        `relative cursor-pointer lg:max-w-[434px] lg:max-h-[392px] max-w-[234px] max-h-[192px]  transition delay-10 ease-in-out transform duration-300 flex justify-center items-center group `,
         classname,
         isHover ? "hover:scale-150 hover:z-[99]" : "scale-1 z-1",
         isDefault ? "scale-150 " : ""

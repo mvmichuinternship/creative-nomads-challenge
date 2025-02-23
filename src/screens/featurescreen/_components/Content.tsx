@@ -45,7 +45,6 @@ export default function Content() {
       <div className=" md:pt-16 pt-16 w-full flex flex-col gap-y-12">
         {buttonData.map((data) => (
           <span key={data.text}>
-
             <ButtonContainer
               text={data.text}
               ButtonContainerAlt={data.buttonContainerAlt}
@@ -53,7 +52,6 @@ export default function Content() {
               imageClassName={data.imageClassName}
               onHover={() => {
                 setContent(data);
-                console.log("hovered");
               }}
             />
           </span>
@@ -62,14 +60,22 @@ export default function Content() {
       {/* </div> */}
       <div className="flex flex-col justify-center items-center  sm:w-[31rem] w-[70%] z-50  md:pt-40 ">
         <div className=" w-full ">
-          <Typography fontType={"Heading2"} text={content.text} classname={"xs:text-nowrap"}/>
+          <Typography
+            fontType={"Heading2"}
+            text={content.text}
+            classname={"xs:text-nowrap"}
+          />
           <Typography
             fontType={"Body"}
             classname={" pt-4 pb-8"}
             text={content.description}
           />
           <div className="flex flex-col lg:flex-row  w-full">
-            <Button buttonText={"MORE FEATURES"} svgCode={svgCursor} classname={"hover:px-[14.6px]"}/>
+            <Button
+              buttonText={"MORE FEATURES"}
+              svgCode={svgCursor}
+              classname={"hover:px-[14.6px]"}
+            />
           </div>
         </div>
       </div>

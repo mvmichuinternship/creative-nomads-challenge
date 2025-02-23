@@ -6,7 +6,7 @@ import { footerPolicies } from "@/data/footerData";
 
 export default function FooterScreen() {
   return (
-    <div className="h-fit w-[100%] bg-secondary flex flex-col gap-y-7 justify-center items-start md:px-20 px-4">
+    <div className="h-fit w-[100%] bg-secondary flex flex-col gap-y-7 justify-center items-start md:px-20 px-4 pt-8">
       <div className="flex ">
         <Image
           alt=""

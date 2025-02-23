@@ -6,7 +6,7 @@ interface IconComponentProps {
   svgCode: ReactElement;
 }
 const IconComponent = ({ classname, svgCode }: IconComponentProps) => {
-  return <span className="w-fit h-fit">{svgCode}</span>;
+  return <span className={cn(`w-fit h-fit `,classname)}>{svgCode}</span>;
 };
 
 export default IconComponent;

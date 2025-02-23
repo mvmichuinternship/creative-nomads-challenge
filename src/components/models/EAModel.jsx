@@ -70,7 +70,7 @@ export function EAModel(props) {
   const { nodes, materials } = useGraph(clone);
   const { actions } = useAnimations(animations, group);
   useEffect(() => {
-    console.log(actions)
+    // console.log(actions)
     //crawl, jump, swing to land
     const animation = actions["mixamo.com"];
     animation.timeScale = 0.75

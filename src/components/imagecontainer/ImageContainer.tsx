@@ -16,7 +16,7 @@ const ImageContainer = ({
 }: ImageContainerProps) => {
   return (
     <div
-      className="relative lg:max-w-[122px] max-w-[75px]  flex justify-center items-center group rounded-full hover:scale-110 transition-all transform duration-300"
+      className="cursor-pointer relative lg:max-w-[122px] max-w-[75px]  flex justify-center items-center group rounded-full hover:scale-110 transition-all transform duration-300"
       onMouseEnter={onHover}
     >
       <div className="invisible group-hover:visible absolute rounded-full -inset-1 bg-white ease-in-out  blur-sm opacity-80"></div>

@@ -21,6 +21,7 @@ export default function FooterSection() {
                 <div className="">
                   <Image
                     alt={""}
+                    className="cursor-pointer hover:scale-[1.3] transition-all duration-300 ease-in-out"
                     src={`/assets/footerimages/icons/${data}`}
                     width={24}
                     height={24}
