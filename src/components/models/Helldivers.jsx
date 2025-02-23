@@ -36,11 +36,26 @@ Title: Low Poly Helldiver
 
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber';
 
 export function HelldiversModel(props) {
+  const group = React.useRef();
   const { nodes, materials } = useGLTF('models/hd.glb')
+  const initialY = -70;
+  const floatAmplitude = 0.5;
+  const floatSpeed = 2;
+  const rotationSpeed = 0.3;
+  useFrame((state) => {
+    if (group.current) {
+      const time = state.clock.getElapsedTime();
+      group.current.position.y =
+        initialY + Math.sin(time * floatSpeed) * floatAmplitude;
+
+      group.current.rotation.y += rotationSpeed * 0.01;
+    }
+  });
   return (
-    <group {...props} dispose={null} position={[-10,-70,-200]}>
+    <group ref={group} {...props} dispose={null} position={[-5,-70,-200]}>
       <mesh geometry={nodes.Plane002_Material_0.geometry} material={materials.Material} rotation={[-Math.PI / 2, 0, 0]} />
       <mesh geometry={nodes.Plane002_Helmet_0.geometry} material={materials.Helmet} rotation={[-Math.PI / 2, 0, 0]} />
       <mesh geometry={nodes.Plane002_Body_0.geometry} material={materials.Body} rotation={[-Math.PI / 2, 0, 0]} />

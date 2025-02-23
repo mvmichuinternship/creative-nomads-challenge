@@ -5,8 +5,8 @@ import { SmallRectangle } from "@/components/posters/SmallRectangle";
 import Content from "./_components/Content";
 import ImageContainer from "@/components/imagecontainer/ImageContainer";
 import Typography from "@/components/typography/Typography";
-import { useEffect, useState } from "react";
-import { posterData } from "@/data/posetData";
+import { use, useEffect, useState } from "react";
+import { posterContent, posterType } from "@/data/posetData";
 import Button from "@/components/button/Button";
 import { svgPrebook } from "@/components/icon/svg/Prebook";
 import { svgGame } from "@/components/icon/svg/Game";
@@ -17,17 +17,22 @@ import { EAModel } from "@/components/models/EAModel.jsx";
 import { HelldiversModel } from "@/components/models/Helldivers.jsx";
 import { RNCModel } from "@/components/models/RNCModel.jsx";
 import { LastofusModel } from "@/components/models/LatofUSModel.jsx";
+import Music from "@/components/music/Music";
 
 export default function PosterScreen() {
   const [setWindow, setSetWindow] = useState(
     typeof window !== "undefined" && window.innerWidth < 1024
   );
-  const [bgimagePattern, setbGImagePattern] = useState("astrobot1");
-  const [imagePattern, setImagePattern] = useState("astrobot1");
-  const [smallimagePattern, setSmallImagePattern] = useState("b-astrobot");
+  const [posterData, setPosterData] = useState<posterType>({
+    imageName: "astrobot1",
+    bigimageName: "b-astrobot",
+    svgName: "astrobot1",
+    title: "ASTROBOT",
+    music: "astro_bot",
+  });
 
   const renderModelSpace = () => {
-    switch (imagePattern) {
+    switch (posterData.imageName) {
       case "astrobot1":
         return <AstroModel />;
       case "spidy":
@@ -60,18 +65,21 @@ export default function PosterScreen() {
 
   return (
     <div
-      className={`relative min-w-screen w-full max-w-screen lg:bg-transparent min-h-screen bg-[url('/assets/rectangleimages/${bgimagePattern}.png')] rounded-lg bg-cover flex justify-center items-center`}
+      className={`z-1 relative min-w-screen w-full max-w-screen  rounded-lg bg-cover flex justify-center items-center`}
       style={{
         backgroundImage: setWindow
-          ? `url('/assets/rectangleimages/${bgimagePattern}.png')`
+          ? `url('/assets/rectangleimages/${posterData.svgName}.png')`
           : "none",
         objectFit: "cover",
         padding: "0 8px",
       }}
     >
+      <div className="w-50 h-50 z-[99] cursor-pointer">
+        <Music src={`${posterData.music}`} />
+      </div>
       <div className=" hidden lg:block lg:absolute z-1 -top-10 lg:-left-80  w-[60%] h-[60%] ">
         <SmallRectangle
-          pattern={`/assets/rectangleimages/${bgimagePattern}.png`}
+          pattern={`/assets/rectangleimages/${posterData.svgName}.png`}
         />
       </div>
       <div className="w-[70%] h-[100%] lg:w-[80%] relative z-50 lg:left-32 xl:top-0 lg:top-0">
@@ -93,14 +101,12 @@ export default function PosterScreen() {
               />
             </div>
             <div className="grid grid-cols-3 place-items-start gap-x-4 gap-y-4 lg:gap-x-10 lg:gap-y-8 lg:max-w-full py-8">
-              {posterData.map((data) => (
+              {posterContent.map((data) => (
                 <div key={data.title}>
                   <ImageContainer
                     ImageContainerSrc={data.imageName}
                     onHover={() => {
-                      setImagePattern(data.imageName);
-                      setbGImagePattern(data.svgName);
-                      setSmallImagePattern(data.bigimageName);
+                      setPosterData(data);
                     }}
                   />
                 </div>
@@ -116,7 +122,7 @@ export default function PosterScreen() {
           </div>
           <div className="lg:w-auto md:w-[50%] h-[50%] hidden sm:block absolute py-8 lg:py-0 px-2 lg:-top-24 right-0">
             {/* <div className="absolute bottom-0 w-[300px]  h-[300px] blur-[100px] bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-70" /> */}
-            <RenderThreeModel className={"z-50 "}>
+            <RenderThreeModel className={"z-0 "}>
               {renderModelSpace()}
             </RenderThreeModel>
           </div>
@@ -124,7 +130,7 @@ export default function PosterScreen() {
       </div>
       <div className="w-[60%] hidden lg:flex  lg:relative bottom-0  z-1">
         <img
-          src={`/assets/rectangleimages/${smallimagePattern}.png`}
+          src={`/assets/rectangleimages/${posterData.bigimageName}.png`}
           className="w-full "
         />
         {/* <BigRectangle pattern={`/assets/rectangleimages/${imagePattern}.png`}/> */}

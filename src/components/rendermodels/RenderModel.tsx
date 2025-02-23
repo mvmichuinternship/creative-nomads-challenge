@@ -42,11 +42,11 @@ interface RenderThreeModelProps {
 }
 
 const RenderThreeModel = ({ children, className,isHelldiver }: RenderThreeModelProps) => {
-  console.log("model loaded");
+  // console.log("model loaded");
   return (
     <Canvas
       className={cn(
-        `w-full h-1/2   z-150 w-[300px]  h-[300px]  bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full `,
+        `w-full h-1/2   z-0 w-[300px]  h-[300px]  bg-primary rounded-full `,
         className
       )}
       

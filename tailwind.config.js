@@ -193,6 +193,7 @@ module.exports = {
       primary: "#050815",
       secondary: "#050816",
       buttonbg: "#D9D9D908",
+      circlebuttonbg: "#D9D9D9",
       buttonShadow: "#072FB9", // spread 1 blur 15
       buttonShadowHover: "#072FB9", //spread 13 blur 15
       cardShadowHover: "#3C52E6", //blur 17 spread 9

@@ -1,10 +1,19 @@
-import React, { useRef } from 'react'
+import React, { useRef,useEffect } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 
 export function LastofusModel(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('models/lastofus-transformed.glb')
   const { actions } = useAnimations(animations, group)
+
+  useEffect(() => {
+    // console.log(actions)
+    //idle
+    const animation = actions["idle"];
+    animation.setEffectiveWeight(100);
+    animation.setLoop(true);
+    animation.play();
+  }, []);
   return (
     <group ref={group} {...props} dispose={null} scale={[30, 30, 30] } position={[0, -20, 0]}>
       <group name="Sketchfab_Scene">

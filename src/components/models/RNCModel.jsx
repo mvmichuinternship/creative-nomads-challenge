@@ -8,7 +8,7 @@ Source: https://sketchfab.com/3d-models/trebble-ratchet-and-clank-npc-c2c3d4b741
 Title: TREBBLE - Ratchet and Clank NPC
 */
 
-import React from "react";
+import React,{useEffect} from "react";
 import { useGraph } from "@react-three/fiber";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { SkeletonUtils } from "three-stdlib";
@@ -19,8 +19,16 @@ export function RNCModel(props) {
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
   const { actions } = useAnimations(animations, group);
+  useEffect(() => {
+    // console.log(actions)
+    //idle
+    const animation = actions["Take 001"];
+    animation.setEffectiveWeight(100);
+    animation.setLoop(true);
+    animation.play();
+  }, []);
   return (
-    <group ref={group} {...props} dispose={null} scale={[20,20,20]} position={[0,-10,0]}>
+    <group ref={group} {...props} dispose={null} scale={[23,23,23]} position={[0,-20,0]}>
       <group name="Sketchfab_Scene">
         <group name="Object_4" scale={0.019}>
           <group
