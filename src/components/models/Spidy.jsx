@@ -8,7 +8,7 @@ Source: https://sketchfab.com/3d-models/spider-man-playstation-rigged-e132c0ec7e
 Title: Spider man playstation (Rigged)
 */
 
-import React from "react";
+import React,{useEffect} from "react";
 import { useGraph } from "@react-three/fiber";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { SkeletonUtils } from "three-stdlib";
@@ -19,8 +19,19 @@ export function SpidyModel(props) {
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
   const { actions } = useAnimations(animations, group);
+
+  useEffect(() => {
+    // console.log(actions)
+    //crawl, jump, swing to land
+    const animation = actions["Swing to land"];
+    animation.timeScale = 0.75
+    animation.setEffectiveWeight(100);
+    animation.setLoop(true);
+    animation.play();
+  }, []);
+
   return (
-    <group ref={group} {...props} dispose={null} scale={[13,13,13]} position={[-2, -5, 0]}>
+    <group ref={group} {...props} dispose={null} scale={[13,13,13]} position={[-2, -10, 0]}>
       <group name="Sketchfab_Scene" >
         <primitive object={nodes.GLTF_created_0_rootJoint} />
         <skinnedMesh

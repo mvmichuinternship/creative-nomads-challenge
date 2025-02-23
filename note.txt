@@ -7,10 +7,11 @@ bg color for button --> done
 cardscreen hover issue --> done
 navbar animation --> to be looked into
 posters animation and poster small rectangle pics to be updated
-music to be added
+music to be added --> done
 canvas better bg to be changed.
-3d model animations to be added.
+3d model animations to be added. --> done
 features page button working in responsive screen to be changed.
+Add cursor pointer to clickables
 
 
 
