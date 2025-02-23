@@ -66,7 +66,6 @@ export default function PosterScreen() {
   return (
     <div
       className={`z-1 relative min-w-screen w-full max-w-screen  rounded-lg bg-cover flex justify-center items-center`}
-      className={`z-1 relative min-w-screen w-full max-w-screen  rounded-lg bg-cover flex justify-center items-center`}
       style={{
         backgroundImage: setWindow
           ? `url('/assets/rectangleimages/${posterData.svgName}.png')`
