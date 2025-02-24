@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Content() {
   return (
-    <div className="w-full h-full relative sm:static sm:flex sm:flex-row flex flex-col justify-between items-center lg:px-28 md:px-8 px-4">
+    <div className="w-full h-full relative sm:static sm:flex sm:flex-row flex flex-col justify-center sm:justify-between items-center lg:px-28 md:px-8 px-4">
       <div className="lg:w-[37%] h-full flex flex-col lg:justify-center lg:items-start md:justify-center md:items-start sm:justify-center sm:items-start items-center justify-start w-full   md:w-[60%]">
         <Typography
           fontType={"Subtitle"}

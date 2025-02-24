@@ -58,23 +58,23 @@ export default function Content() {
         ))}
       </div>
       {/* </div> */}
-      <div className="flex flex-col justify-center items-center  sm:w-[31rem] w-[70%] z-50  md:pt-40 ">
+      <div className="flex flex-col justify-center items-center  sm:w-[31rem] w-[100%] sm:text-start text-justify z-50  md:pt-40 ">
         <div className=" w-full ">
           <Typography
             fontType={"Heading2"}
             text={content.text}
-            classname={"xs:text-nowrap"}
+            classname={"xs:text-nowrap sm:text-start text-center"}
           />
           <Typography
             fontType={"Body"}
-            classname={" pt-4 pb-8"}
+            classname={" pt-4 pb-8 "}
             text={content.description}
           />
-          <div className="flex flex-col lg:flex-row  w-full">
+          <div className="flex flex-col lg:flex-row   w-full">
             <Button
               buttonText={"MORE FEATURES"}
               svgCode={svgCursor}
-              classname={"hover:px-[14.6px]"}
+              classname={"hover:px-[14.6px] sm:self-start self-center"}
             />
           </div>
         </div>
