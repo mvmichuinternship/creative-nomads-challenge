@@ -21,13 +21,13 @@ export default function NavBar() {
         <div onClick={toggleMenu} className="relative cursor-pointer">
           {isMenuOpen ? <X /> : <Menu />}
         </div>
-        <Image
+        {/* <Image
           alt="Logo image"
           src="/assets/homepage/logo.png"
           width={201}
           height={72}
           className={!isMenuOpen ? "pb-2" : "hidden"}
-        />
+        /> */}
       </div>
 
       <AnimatePresence mode="wait">
