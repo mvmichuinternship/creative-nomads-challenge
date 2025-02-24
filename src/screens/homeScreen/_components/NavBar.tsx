@@ -54,7 +54,7 @@ export default function NavBar() {
             }}
           >
             <div className="w-full z-1 origin-top h-auto flex flex-col pr-4 items-center justify-start text-center">
-              <div className="flex flex-col gap-y-2 xs:gap-x-0">
+              <div className="flex flex-col gap-y-2 xs:gap-x-0 pointer-events-none hover:invisible visible">
                 {navbarData.map((data) => (
                   <div key={data} className="z-1">
                     <Typography
@@ -77,15 +77,15 @@ export default function NavBar() {
         )}
       </AnimatePresence>
 
-      <div className="w-full z-0 h-auto hidden md:flex md:flex-row pr-4 items-center justify-around text-center">
+      <div className="w-[100%] z-0 h-auto hidden md:flex md:flex-row pr-4 items-center justify-around text-center">
         <Image
           alt="Logo image"
           src="/assets/homepage/logo.png"
           width={201}
           height={72}
-          className="pb-2 flex-none visible "
+          className="pb-2 pl-4 flex-none visible "
         />
-        <div className="flex gap-x-16 md:flex-row md:gap-y-0 md:w-auto md:gap-x-3 lg:gap-x-10 xs:gap-x-0">
+        <div className="flex min-w-[42%]  gap-x-16 pointer-events-none hover:invisible visible md:flex-row md:items-center md:justify-center md:gap-y-0 md:w-auto md:gap-x-3 lg:gap-x-10 xs:gap-x-0">
           {navbarData.map((data) => (
             <div key={data} className="z-1">
               <Typography
@@ -100,7 +100,7 @@ export default function NavBar() {
           <Button
             buttonText="PRE-BOOK"
             svgCode={svgPrebook}
-            classname="hover:px-[17px] z-50"
+            classname="hover:px-[17px] z-50 pr-4"
           />
         </span>
       </div>
