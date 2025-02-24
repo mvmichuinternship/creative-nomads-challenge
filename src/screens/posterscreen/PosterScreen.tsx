@@ -89,7 +89,7 @@ export default function PosterScreen() {
       <motion.div
         initial={{ y: -100, x: 100 }}
         whileInView={{ y: 0, x: 0 }}
-        transition={{ type: "spring", duration: 10 }}
+        transition={{ type: "spring", duration: 5 }}
         key={posterData.small}
         className=" hidden lg:block lg:absolute z-1 -top-20 lg:left-0  w-[60%] h-[60%] "
       >
@@ -148,7 +148,7 @@ export default function PosterScreen() {
       <motion.div
         initial={{ y: 100, x: -100 }}
         whileInView={{ y: 0, x: 0 }}
-        transition={{ type: "spring", duration: 10 }}
+        transition={{ type: "spring", duration: 5 }}
         key={posterData.bigimageName}
         className="w-[60%] hidden lg:flex  lg:relative bottom-0  z-1"
       >
