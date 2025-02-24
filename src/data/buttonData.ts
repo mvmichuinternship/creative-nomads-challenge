@@ -1,9 +1,9 @@
 export interface ButtonProps {
-  text: String;
-  buttonContainerAlt: String;
-  ButtonContainerSrc: String;
-  imageClassName: String;
-  description: String;
+  text: string;
+  buttonContainerAlt: string;
+  ButtonContainerSrc: string;
+  imageClassName: string;
+  description: string;
 }
 export const buttonData = [
   {

@@ -6,6 +6,7 @@ import { svgGlasses } from "@/components/icon/svg/Glasses";
 import { svgPrebook } from "@/components/icon/svg/Prebook";
 import Typography from "@/components/typography/Typography";
 import { buttonData, ButtonProps } from "@/data/buttonData";
+import { motion } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -59,7 +60,13 @@ export default function Content() {
       </div>
       {/* </div> */}
       <div className="flex flex-col justify-center items-center  sm:w-[31rem] w-[100%] sm:text-start text-justify z-50  md:pt-40 ">
-        <div className=" w-full ">
+        <motion.div
+          className=" w-full "
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1.05 }}
+          transition={{ type: "spring", duration: 4 }}
+          key={content.text}
+        >
           <Typography
             fontType={"Heading2"}
             text={content.text}
@@ -77,7 +84,7 @@ export default function Content() {
               classname={"hover:px-[14.6px] sm:self-start self-center"}
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
