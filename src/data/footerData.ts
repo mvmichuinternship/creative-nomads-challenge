@@ -63,11 +63,16 @@ const footerItems = [
 ];
 
 const footerPolicies = [
-  "Legal",
-  "Privacy policy",
-  "Website terms of use",
-  "Site Map",
-  "Cookies Policy",
+  "Legal ",
+  // "|",
+  "Privacy policy  ",
+  // "|",
+  "Website terms of use  ",
+  // "|",
+  "Site Map  ",
+  // "|",
+  "Cookies Policy  ",
+  // "|",
   "Software Usage Terms",
 ];
 

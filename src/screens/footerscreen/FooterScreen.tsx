@@ -36,19 +36,34 @@ export default function FooterScreen() {
         />
       </div>
       <Divider />
-      <div className="w-full flex md:flex-row flex-col justify-start items-start md:justify-between md:items-center pb-16">
-        <div className="flex gap-x-2">
-        <Image alt="" src={"/assets/footerimages/icons/Geography.svg"} width={25} height={25}/>
-        <Typography fontType={"SmallText"} text={"India"} />
+      <div className="w-full flex lg:flex lg:flex-row flex-col justify-center items-start lg:justify-between lg:items-center lg:pb-16">
+        <div className="flex items-center justify-center gap-x-2">
+          <Image
+            alt=""
+            src={"/assets/footerimages/icons/Geography.svg"}
+            width={24}
+            height={24}
+            className="pt-[2px]"
+          />
+          <Typography fontType={"SmallText"} text={"India"} />
         </div>
-        <div className="md:space-x-4 flex sm:flex-row flex-col">
-
-        {footerPolicies.map((data) => (
-          <div key={data} >
-
-            <Typography fontType={"SmallText"} text={data} />
-          </div>
-        ))}
+        <div className="md:space-x-4 flex sm:flex-row flex-col flex-wrap ">
+          {footerPolicies.map((data, index) => (
+            <div className="flex flex-nowrap">
+              <Typography
+                fontType={"SmallText"}
+                text={`${data}`}
+                classname={"text-nowrap text-start"}
+              />
+              {index < footerPolicies.length - 1 && (
+                <Typography
+                  fontType={"SmallText"}
+                  text={`|`}
+                  classname={" px-4 sm:flex hidden text-nowrap "}
+                />
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </div>

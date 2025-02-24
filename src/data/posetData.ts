@@ -21,7 +21,7 @@ export const posterContent = [
     svgName: "lastofus1",
     title: "THE LAST OF US",
     music: "the_last_of_us",
-    small: "Rectangle9",
+    small: "Rectangle12",
   },
   {
     imageName: "rnc",
@@ -45,7 +45,7 @@ export const posterContent = [
     svgName: "fifa",
     title: "EA SPORTS F 25",
     music: "ea_sports",
-    small: "Rectangle12",
+    small: "Rectangle9",
   },
   {
     imageName: "helldiver",

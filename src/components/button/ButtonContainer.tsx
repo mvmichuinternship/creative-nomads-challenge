@@ -21,7 +21,7 @@ const ButtonContainer = ({
 }: ButtonContainerProps) => {
   return (
     <div
-      className="relative sm:w-fit w-[50%] justify-center  flex sm:justify-between items-center group transform hover:scale-110 transition-all duration-600 z-[99]"
+      className="relative cursor-pointer sm:w-fit w-[50%] justify-center  flex sm:justify-between items-center group transform hover:scale-110 transition-all duration-600 z-[99]"
       onMouseEnter={onHover}
     >
       <div className="absolute rounded-xs -inset-1 bg-buttonShadow z-[1] group-hover:z-[1] group-hover:blur-sm group-hover:scale-y-[1.05] group-hover:opacity-100 transition-all duration-600 transform blur-sm opacity-80"></div>

@@ -17,7 +17,7 @@ export default function NavBar() {
 
   return (
     <div className="w-full h-auto">
-      <div className="md:hidden flex items-center justify-start px-4">
+      <div className="md:hidden flex items-start justify-between px-4">
         <div onClick={toggleMenu} className="relative cursor-pointer">
           {isMenuOpen ? <X /> : <Menu />}
         </div>
@@ -26,7 +26,7 @@ export default function NavBar() {
           src="/assets/homepage/logo.png"
           width={201}
           height={72}
-          // className={!isMenuOpen ? "pb-2" : "hidden"}
+          className={!isMenuOpen ? "pb-2" : "hidden"}
         />
       </div>
 
@@ -69,7 +69,7 @@ export default function NavBar() {
                 <Button
                   buttonText="PRE-BOOK"
                   svgCode={svgPrebook}
-                  classname="hover:px-[17px] items-center"
+                  classname="hover:px-[17px]  items-center"
                 />
               </span>
             </div>
@@ -85,7 +85,7 @@ export default function NavBar() {
           height={72}
           className="pb-2 pl-4 flex-none visible "
         />
-        <div className="flex min-w-[42%]  gap-x-16 pointer-events-none hover:invisible visible md:flex-row md:items-center md:justify-center md:gap-y-0 md:w-auto md:gap-x-3 lg:gap-x-10 xs:gap-x-0">
+        <div className="flex min-w-[42%] gap-x-16 pointer-events-none hover:invisible visible md:flex-row md:items-center md:justify-center md:gap-y-0 md:w-auto md:gap-x-3 lg:gap-x-10 xs:gap-x-0">
           {navbarData.map((data) => (
             <div key={data} className="z-1">
               <Typography
@@ -96,11 +96,11 @@ export default function NavBar() {
             </div>
           ))}
         </div>
-        <span className="pt-3 hover:cursor-pointer z-50 visible">
+        <span className="pt-3 pr-6 hover:cursor-pointer z-50 visible">
           <Button
             buttonText="PRE-BOOK"
             svgCode={svgPrebook}
-            classname="hover:px-[17px] z-50 pr-4"
+            classname="hover:px-[29.5px] px-8  z-50 "
           />
         </span>
       </div>

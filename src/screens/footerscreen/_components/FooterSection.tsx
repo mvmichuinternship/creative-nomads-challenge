@@ -13,7 +13,7 @@ export default function FooterSection() {
           <Typography
             fontType={"Subtitle"}
             text={footerData.footerHeading}
-            classname={"pb-4"}
+            classname={"pb-4 cursor-pointer hover:font-medium transition-all ease-in-out duration-300"}
           />
           <div className="   items-baseline text-start">
             <div className="flex text-justify gap-x-2">
@@ -30,13 +30,13 @@ export default function FooterSection() {
               ))}
             </div>
             {footerData.footerItems.map((itemData) => (
-              <>
+              <span key={itemData}>
                 <Typography
                   fontType={"SmallText"}
                   text={itemData}
-                  classname={"place-self-stretch "}
+                  classname={"place-self-stretch cursor-pointer"}
                 />
-              </>
+              </span>
             ))}
           </div>
         </div>
